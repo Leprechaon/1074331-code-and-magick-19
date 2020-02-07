@@ -65,7 +65,7 @@ var doShuffles = function (arr) {
     arr[j] = temp;
   }
   return arr;
-}
+};
 
 var createWizzardArr = function (numberOfWizards) {
   var wizardsArr = [];
