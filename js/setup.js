@@ -17,6 +17,7 @@ var setupPlayer = document.querySelector('.setup-player');
 var wizardCoat = setupPlayer.querySelector('.wizard-coat');
 var wizardEyes = setupPlayer.querySelector('.wizard-eyes');
 var wizardFireball = setupPlayer.querySelector('.setup-fireball-wrap');
+var playerName = document.querySelector('.setup-user-name');
 
 var onPopupEscPress = function (evt) {
   if (evt.key === ESC_KEY) {
@@ -127,3 +128,7 @@ wizardCoat.addEventListener('click', onCoatPress);
 wizardEyes.addEventListener('click', onEyesPress);
 
 wizardFireball.addEventListener('click', onFireballPress);
+
+playerName.addEventListener('keydown', function (evt) {
+  evt.stopPropagation();
+});
