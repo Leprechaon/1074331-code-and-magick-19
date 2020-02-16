@@ -24,6 +24,15 @@
     setup.style.left = X;
   };
 
+  var form = setup.querySelector('.setup-wizard-form');
+
+  form.addEventListener('submit', function (evt) {
+    window.backend.save(new FormData(form), function () {
+      setup.classList.add('hidden');
+    }, alert);
+    evt.preventDefault();
+  });
+
   window.dragAndDrop.mooveElement(setup, dialogHandle);
 
   setupOpen.addEventListener('click', function () {
